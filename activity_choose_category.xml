@@ -4,18 +4,204 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".ChooseCategory">
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="63dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/sports"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:text="Sports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/smallthings"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="121dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:text="Small Things matter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="@drawable/food"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:text="Delicious?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:background="@drawable/ancientmyths"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="60dp"
+        android:text="Ancient Myths"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="@drawable/universe"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="129dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="The Larger World"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/history"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:text="Historical fact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:background="@drawable/geo"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="300dp"
+        android:text="Geography"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="60dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/maths"
+        android:onClick="catOneClick"
+        android:text="@string/cat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:text="Are you Really good at math"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/categories"
+        android:layout_width="186dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginRight="114dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Fermidable"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,31 +209,80 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_width="59dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/environment"
         android:onClick="catOneClick"
-        android:text="@string/cat1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/science"
         android:onClick="catOneClick"
         android:text="@string/cat2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:text="Environment"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="126dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="The Crazy Science"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="413dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="413dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="413dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="727dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

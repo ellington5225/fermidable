@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Fermidable</string>
+
+    //start page
+    <string name="title">FERMIDABLE</string>
+    <string name="button_start">Start!</string>
+
+    //category page
+    <string name="categories">Choose your category</string>
+    <string name="cat1"> </string>
+    <string name="cat2"> </string>
+
+    //gameplay pages
+    <string name="score">Current Score:</string>
+    <string name="scorevalue">Score Value</string>
+    <string name="questiontext">Question Text Here</string>
+    <string name="useranswerhere">Your answer:</string>
+    <string name="submit">Submit</string>
+
+    //results page
+    <string name="finalscorelabel">Final Score:</string>
+    <string name="finalscorevalue">[final score]</string>
+    <string name="samecategory">Try another question!</string>
+    <string name="diffcategory">Try a different category!</string>
+</resources>

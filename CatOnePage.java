@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -41,15 +42,7 @@ public class CatOnePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_one_page);
-/**
-        availableQs = new ArrayList<String>();
-        chosenQs = new ArrayList<String>();
 
-        allAnswers = new ArrayList<Integer>();
-        realAnswers = new ArrayList<Integer>();
-
-        chosenInts = new ArrayList<Integer>();
-        availableInts = new ArrayList<Integer>();
 
         mDatabase = FirebaseDatabase.getInstance().getReference("/Environment");
 
@@ -84,42 +77,23 @@ public class CatOnePage extends AppCompatActivity {
 
             }
         });
-    */
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Update();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
-        //sample questions in two categories
-        Question q1 = new Question (1, 1, "What is 1+1?", 2);
-        Question q2 = new Question (2, 1, "What is 2+2?", 4);
-        Question q3 = new Question (3, 1, "What is 3+3?", 6);
-        Question q4 = new Question (4 ,1,"How many states are in the US?", 50);
-        Question q5 = new Question (5, 1, "How many continents are there?", 7);
-        Question q6 = new Question (6, 1, "When was the Declaration signed?", 1776);
+    }
 
-        //make these arrays for real?
-        availableQs = new ArrayList<String>();
-        chosenQs = new ArrayList<String>();
-
-        availableInts = new ArrayList<Integer>();
-        chosenInts = new ArrayList<Integer>();
-
-        allAnswers = new ArrayList<Integer>();
-        realAnswers = new ArrayList<Integer>();
-
-
-        //add all questions to available Qs (is there an easier/faster way to do this?)
-        availableQs.add(q1.getQuestion());
-        availableQs.add(q2.getQuestion());
-        availableQs.add(q3.getQuestion());
-        availableQs.add(q4.getQuestion());
-        availableQs.add(q5.getQuestion());
-        availableQs.add(q6.getQuestion());
-
-        allAnswers.add(q1.getAnswer());
-        allAnswers.add(q2.getAnswer());
-        allAnswers.add(q3.getAnswer());
-        allAnswers.add(q4.getAnswer());
-        allAnswers.add(q5.getAnswer());
-        allAnswers.add(q6.getAnswer());
+    void Update(){
 
         int randInt;
 
@@ -133,27 +107,10 @@ public class CatOnePage extends AppCompatActivity {
             realAnswers.add(allAnswers.get(randInt));
 
             availableInts.remove(randInt);
-            availableQs.remove(availableQs.get(randInt));
+            availableQs.remove(randInt);
+            allAnswers.remove(randInt);
         }
 
-        /**
-        //choose 5 distinct integers
-        for (int k = 0; k < 5; k++){
-            randInt = (int) (Math.random()*availableQs.size());
-            while (chosenInts.contains(randInt)){
-                randInt = (int) (Math.random()*availableQs.size());
-            }
-            chosenInts.add(randInt);
-        }
-         */
-/**
-        //add questions to chosenQs and answers to realAnswers
-        for (int j = 0; j < 5; j++){
-            int chosenIndex = chosenInts.get(j);
-            chosenQs.add(availableQs.get(chosenInts.get(j)));
-            realAnswers.add(allAnswers.get(chosenInts.get(j)));
-        }
- */
 
 
         //at this point we have a list of chosen questions (chosenQs)
@@ -177,16 +134,6 @@ public class CatOnePage extends AppCompatActivity {
         showq3.setText(question3);
         showq4.setText(question4);
         showq5.setText(question5);
-
-        /**
-        //add all questions with categoryID 1 to finalQs (only get questions from 1 category)
-        for (int i = 0 ; i < availableQs.size(); i++){
-            if (availableQs.get(i).getCategoryID() == 1){
-                finalQs.add(availableQs.get(i));
-            }
-        }
-         */
-
     }
 
     public void submitClick(View view){
